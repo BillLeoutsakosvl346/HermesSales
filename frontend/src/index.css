@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 214 20% 94%;
+    --secondary-foreground: 220 20% 20%;
+
+    --muted: 214 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 214 20% 94%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 25% 90%;
+    --input: 214 25% 90%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.375rem;
+
+    --sidebar-background: 220 20% 97%;
+    --sidebar-foreground: 220 14% 30%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 214 20% 93%;
+    --sidebar-accent-foreground: 220 20% 10%;
+    --sidebar-border: 214 25% 90%;
+    --sidebar-ring: 221 83% 53%;
+
+    /* Custom status colors */
+    --status-ready: 213 94% 52%;
+    --status-dialing: 38 92% 50%;
+    --status-paused: 215 14% 50%;
+    --status-done: 142 71% 45%;
+    --status-dnc: 0 72% 51%;
+    --status-ringing: 262 83% 58%;
+    --status-voicemail: 28 80% 52%;
+    --status-live: 142 71% 45%;
+    --status-failed: 0 72% 51%;
+    --status-completed: 215 14% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-mono-prompt {
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .text-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .table-dense th,
+  .table-dense td {
+    @apply py-1 px-2 text-[13px];
+  }
+}
